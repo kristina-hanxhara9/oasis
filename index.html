@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oasis Homes & Plumbing | Professional and Experienced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #009688;
@@ -41,7 +43,7 @@
         }
         
         .section-padding {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         .text-center {
@@ -56,10 +58,6 @@
             width: 100%;
             z-index: 1000;
             transition: all 0.3s ease;
-            background-color: transparent;
-        }
-        
-        header.sticky {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
@@ -74,17 +72,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .header-info {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
         
         .header-info-item {
             display: flex;
             align-items: center;
             margin-right: 20px;
+            font-size: 14px;
         }
         
         .header-info-item i {
@@ -107,7 +108,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
         
         .logo {
@@ -135,7 +136,7 @@
         }
         
         .logo-text {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 600;
             color: var(--primary);
             line-height: 1.2;
@@ -143,55 +144,35 @@
         
         .logo-text span {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--gray);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
         
         nav ul {
             display: flex;
             list-style: none;
+            align-items: center;
         }
         
         nav ul li {
-            margin-left: 30px;
-            position: relative;
+            margin-left: 25px;
         }
         
         nav ul li a {
             color: var(--secondary-dark);
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
             padding: 10px 0;
             transition: color 0.3s;
             display: block;
         }
         
-        header.sticky nav ul li a {
-            color: var(--secondary-dark);
-        }
-        
         nav ul li a:hover,
         nav ul li a.active {
             color: var(--primary);
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-        
-        nav ul li a:hover::after,
-        nav ul li a.active::after {
-            width: 100%;
         }
         
         .nav-button {
@@ -201,261 +182,168 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
-            transition: background-color 0.3s;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .nav-button i {
-            margin-right: 8px;
+            transition: all 0.3s;
         }
         
         .nav-button:hover {
             background-color: var(--primary-dark);
+            transform: translateY(-2px);
         }
         
-        .mobile-toggle {
+        /* Mobile Menu */
+        .mobile-menu-toggle {
             display: none;
+            background: none;
+            border: none;
             font-size: 24px;
-            color: var(--dark);
+            color: var(--primary);
             cursor: pointer;
         }
         
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-oasis.png') center/cover no-repeat;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
+            padding-top: 120px;
             color: var(--white);
-            padding-top: 80px;
-            position: relative;
         }
         
         .hero-content {
-            max-width: 650px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
         
-        .hero-content h1 {
+        .hero-text h1 {
             font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
         
-        .hero-content h1 span {
-            color: var(--accent);
-        }
-        
-        .hero-content p {
+        .hero-text p {
             font-size: 18px;
             margin-bottom: 30px;
+            opacity: 0.9;
         }
         
         .hero-buttons {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
         
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
+            padding: 15px 35px;
             border-radius: 30px;
-            font-weight: 500;
             text-decoration: none;
-            text-align: center;
+            font-weight: 600;
             transition: all 0.3s;
+            display: inline-block;
         }
         
         .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-            border: 2px solid var(--primary);
+            background-color: var(--accent);
+            color: var(--dark);
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
+            background-color: #ffc107;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .btn-outline {
+        .btn-secondary {
             background-color: transparent;
             color: var(--white);
             border: 2px solid var(--white);
         }
         
-        .btn-outline:hover {
+        .btn-secondary:hover {
             background-color: var(--white);
             color: var(--primary);
         }
         
-        .scroll-down {
-            position: absolute;
-            bottom: 50px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--white);
-            font-size: 24px;
-            animation: bounce 2s infinite;
+        .hero-image {
+            position: relative;
         }
         
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0) translateX(-50%);
-            }
-            40% {
-                transform: translateY(-20px) translateX(-50%);
-            }
-            60% {
-                transform: translateY(-10px) translateX(-50%);
-            }
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
         
-        /* About Section */
-        .about {
+        /* Features */
+        .features {
             background-color: var(--white);
+            padding: 80px 0;
         }
         
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: var(--light);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 35px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* Section Header */
         .section-header {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         
         .section-header h2 {
-            font-size: 36px;
-            color: var(--secondary-dark);
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
         }
         
         .section-header p {
-            max-width: 700px;
-            margin: 0 auto;
-            color: var(--gray);
-            font-size: 16px;
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .about-image {
-            flex: 1;
-            position: relative;
-        }
-        
-        .about-image-main {
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        .about-image-main img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
-        }
-        
-        .about-image:hover .about-image-main img {
-            transform: scale(1.05);
-        }
-        
-        .about-image-accent {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            bottom: -30px;
-            right: -30px;
-            background-color: var(--primary-light);
-            border-radius: 10px;
-            z-index: -1;
-        }
-        
-        .experience-badge {
-            position: absolute;
-            top: -25px;
-            left: -25px;
-            width: 120px;
-            height: 120px;
-            background-color: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: var(--secondary-dark);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .experience-badge span:first-child {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1;
-        }
-        
-        .experience-badge span:last-child {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: var(--secondary-dark);
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--gray);
-        }
-        
-        .about-features {
-            margin-top: 30px;
-        }
-        
-        .about-feature {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .about-feature-icon {
-            color: var(--primary);
-            font-size: 20px;
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-        
-        .about-feature-text h4 {
             font-size: 18px;
-            margin-bottom: 5px;
-            color: var(--secondary-dark);
-        }
-        
-        .about-feature-text p {
             color: var(--gray);
-            margin-bottom: 0;
-            font-size: 14px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         /* Services Section */
@@ -467,416 +355,131 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
         
         .service-card {
             background-color: var(--white);
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .service-image {
             width: 100%;
-            height: 5px;
-            background-color: var(--primary);
-            transition: height 0.3s ease;
-            z-index: 1;
-        }
-        
-        .service-card:hover::before {
-            height: 10px;
-        }
-        
-        .service-card-header {
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card-header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .service-card:hover .service-card-header img {
-            transform: scale(1.1);
-        }
-        
-        .service-card-body {
-            padding: 30px;
-            position: relative;
-        }
-        
-        .service-icon {
-            position: absolute;
-            top: -30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary);
-            border-radius: 50%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 80px;
             color: var(--white);
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
             font-size: 24px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-card-body h3 {
-            font-size: 22px;
             margin-bottom: 15px;
-            color: var(--secondary-dark);
+            color: var(--dark);
         }
         
-        .service-card-body p {
+        .service-content p {
             color: var(--gray);
             margin-bottom: 20px;
+            line-height: 1.8;
         }
         
-        .read-more {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
+        .service-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            color: var(--gray);
             display: flex;
             align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
         }
         
-        .read-more i {
+        .service-features li i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        .service-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .service-link i {
+            margin-left: 5px;
             transition: transform 0.3s;
         }
         
-        .read-more:hover {
+        .service-link:hover {
             color: var(--primary-dark);
         }
         
-        .read-more:hover i {
+        .service-link:hover i {
             transform: translateX(5px);
         }
         
-        /* Why Choose Us */
-        .why-us {
-            background-color: var(--white);
-        }
-        
-        .why-us-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .why-us-text {
-            flex: 1;
-        }
-        
-        .why-us-text h3 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: var(--secondary-dark);
-        }
-        
-        .why-us-text p {
-            margin-bottom: 30px;
-            color: var(--gray);
-        }
-        
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .why-us-item {
-            background-color: var(--light);
-            padding: 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .why-us-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            background-color: var(--primary);
-            color: var(--white);
-        }
-        
-        .why-us-item i {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-            transition: color 0.3s;
-        }
-        
-        .why-us-item:hover i {
-            color: var(--white);
-        }
-        
-        .why-us-item h4 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--secondary-dark);
-            transition: color 0.3s;
-        }
-        
-        .why-us-item:hover h4 {
-            color: var(--white);
-        }
-        
-        .why-us-item p {
-            margin-bottom: 0;
-            color: var(--gray);
-            transition: color 0.3s;
-        }
-        
-        .why-us-item:hover p {
-            color: var(--white);
-        }
-        
-        .why-us-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .why-us-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Projects */
-        .projects {
-            background-color: var(--light);
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-card {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        .project-image {
-            height: 250px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
-        }
-        
-        .project-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 20px;
-            color: var(--white);
-        }
-        
-        .project-overlay h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .project-category {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/400') center/cover no-repeat;
-            color: var(--white);
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .cta h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 18px;
-        }
-        
-        .cta .btn-primary {
-            background-color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .cta .btn-white {
-            background-color: var(--white);
-            color: var(--primary);
-            border-color: var(--white);
-        }
-        
-        .cta .btn-white:hover {
-            background-color: transparent;
-            color: var(--white);
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            background-color: var(--white);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '\201C';
-            font-size: 100px;
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            color: var(--primary-light);
-            opacity: 0.3;
-        }
-        
-        .testimonial-text {
-            margin-bottom: 20px;
-            color: var(--gray);
-            font-style: italic;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .testimonial-author-image {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-right: 15px;
-        }
-        
-        .testimonial-author-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .testimonial-author-info h4 {
-            font-size: 18px;
-            color: var(--secondary-dark);
-            margin-bottom: 5px;
-        }
-        
-        .testimonial-author-info p {
-            color: var(--gray);
-            font-size: 14px;
-        }
-        
-        .testimonial-rating {
-            color: #ffc107;
-            margin-top: 10px;
-        }
-        
-        /* Contact Section */
+        /* Contact Form */
         .contact {
-            background-color: var(--light);
+            background-color: var(--white);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
         }
         
         .contact-info-card {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 40px;
+            border-radius: 15px;
             color: var(--white);
-            padding: 50px;
-            border-radius: 10px;
-            height: 100%;
         }
         
         .contact-info-card h3 {
             font-size: 28px;
             margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .contact-info-card h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent);
         }
         
         .contact-info-item {
             display: flex;
+            align-items: flex-start;
             margin-bottom: 25px;
         }
         
         .contact-info-icon {
-            background-color: rgba(255, 255, 255, 0.1);
             width: 50px;
             height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 20px;
-            color: var(--accent);
+            flex-shrink: 0;
+        }
+        
+        .contact-info-icon i {
             font-size: 20px;
         }
         
@@ -885,10 +488,10 @@
             margin-bottom: 5px;
         }
         
-        .contact-info-text p, .contact-info-text a {
-            color: rgba(255, 255, 255, 0.8);
+        .contact-info-text p,
+        .contact-info-text a {
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            transition: color 0.3s;
         }
         
         .contact-info-text a:hover {
@@ -900,44 +503,38 @@
         }
         
         .contact-social h4 {
-            font-size: 18px;
             margin-bottom: 15px;
         }
         
-        .contact-social-icons {
-            display: flex;
-            gap: 15px;
-        }
-        
         .contact-social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-flex;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
+            align-items: center;
+            justify-content: center;
             color: var(--white);
-            font-size: 18px;
+            margin-right: 10px;
             transition: all 0.3s;
         }
         
         .contact-social-icons a:hover {
             background-color: var(--accent);
-            color: var(--secondary-dark);
+            color: var(--dark);
+            transform: translateY(-3px);
         }
         
         .contact-form {
-            background-color: var(--white);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 15px;
         }
         
         .contact-form h3 {
             font-size: 28px;
             margin-bottom: 30px;
-            color: var(--secondary-dark);
+            color: var(--dark);
         }
         
         .form-group {
@@ -946,107 +543,67 @@
         
         .form-control {
             width: 100%;
-            padding: 12px 20px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
             font-size: 16px;
             transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
         }
         
         .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
             outline: none;
+            border-color: var(--primary);
         }
         
         textarea.form-control {
-            height: 150px;
+            min-height: 150px;
             resize: vertical;
-            border-radius: 20px;
         }
         
         .submit-btn {
             background-color: var(--primary);
             color: var(--white);
+            padding: 15px 40px;
             border: none;
             border-radius: 30px;
-            padding: 12px 30px;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
             width: 100%;
         }
         
         .submit-btn:hover {
             background-color: var(--primary-dark);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         /* Footer */
         footer {
             background-color: var(--secondary-dark);
             color: var(--white);
-            padding-top: 80px;
-        }
-        
-        .footer-top {
-            padding-bottom: 60px;
+            padding: 60px 0 0;
         }
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
+            margin-bottom: 40px;
         }
         
         .footer-widget h4 {
             font-size: 20px;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-            color: var(--white);
-        }
-        
-        .footer-widget h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--primary);
-        }
-        
-        .footer-about p {
             margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
             color: var(--white);
-            transition: all 0.3s;
         }
         
-        .footer-social a:hover {
-            background-color: var(--primary);
+        .footer-widget p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
         
         .footer-links {
@@ -1054,242 +611,601 @@
         }
         
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
         }
         
         .footer-links a i {
-            margin-right: 10px;
-            color: var(--primary);
+            margin-right: 8px;
+            font-size: 12px;
         }
         
         .footer-links a:hover {
-            color: var(--primary);
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
         }
         
         .footer-contact-item {
             display: flex;
-            margin-bottom: 20px;
+            align-items: flex-start;
+            margin-bottom: 15px;
         }
         
         .footer-contact-icon {
-            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-right: 15px;
-            font-size: 16px;
+            flex-shrink: 0;
         }
         
         .footer-contact-text {
             color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
         }
         
         .footer-bottom {
-            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 25px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+        
+        .footer-bottom p {
             color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 150, 136, 0.4);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 150, 136, 0.6);
+        }
+        
+        .chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 380px;
+            max-width: calc(100vw - 40px);
+            height: 550px;
+            max-height: calc(100vh - 120px);
+            background-color: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            flex-direction: column;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+        
+        .chatbot-window.active {
+            display: flex;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-header-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .chatbot-avatar {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 20px;
+            color: var(--dark);
+        }
+        
+        .chatbot-title h3 {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+        
+        .chatbot-title p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .chatbot-close:hover {
+            transform: rotate(90deg);
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.bot {
+            justify-content: flex-start;
+        }
+        
+        .message.user {
+            justify-content: flex-end;
+        }
+        
+        .message-content {
+            max-width: 75%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            line-height: 1.5;
             font-size: 14px;
         }
         
-        /* Responsive */
-        @media (max-width: 992px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: flex-start;
+        .message.bot .message-content {
+            background-color: var(--white);
+            color: var(--dark);
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .message.user .message-content {
+            background-color: var(--primary);
+            color: var(--white);
+            border-bottom-right-radius: 5px;
+        }
+        
+        .quick-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+            padding: 0 20px 10px;
+        }
+        
+        .quick-option {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .quick-option:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .chatbot-input-area {
+            padding: 15px 20px;
+            background-color: var(--white);
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chatbot-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .chatbot-input:focus {
+            border-color: var(--primary);
+        }
+        
+        .chatbot-send {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chatbot-send:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            padding: 12px 16px;
+            background-color: var(--white);
+            border-radius: 15px;
+            border-bottom-left-radius: 5px;
+            max-width: 75px;
+        }
+        
+        .typing-indicator.active {
+            display: flex;
+        }
+        
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--gray);
+            border-radius: 50%;
+            margin: 0 3px;
+            animation: typing 1.4s infinite;
+        }
+        
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
             }
-            
-            .nav-links {
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-top {
                 display: none;
-                width: 100%;
-                margin-top: 20px;
-                padding: 10px 0;
-                border-top: 1px solid #eee;
             }
             
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .nav-links li {
-                margin: 10px 0;
-                margin-left: 0;
-            }
-            
-            .mobile-toggle {
+            .mobile-menu-toggle {
                 display: block;
-                position: absolute;
-                top: 20px;
-                right: 15px;
             }
             
-            .about-content, .why-us-content {
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                z-index: 1001;
+                padding-top: 80px;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
                 flex-direction: column;
+                padding: 0;
             }
             
-            .contact-grid {
+            nav ul li {
+                margin: 0;
+                width: 100%;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            nav ul li a {
+                padding: 15px 30px;
+                display: block;
+            }
+            
+            .nav-button {
+                margin: 20px 30px;
+                display: block;
+                text-align: center;
+            }
+            
+            .hero {
+                padding-top: 100px;
+                min-height: auto;
+            }
+            
+            .hero-content {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .hero-content h1 {
-                font-size: 36px;
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            
+            .hero-text p {
+                font-size: 16px;
             }
             
             .hero-buttons {
                 flex-direction: column;
-                align-items: flex-start;
+            }
+            
+            .btn {
+                text-align: center;
+                width: 100%;
             }
             
             .section-padding {
-                padding: 70px 0;
+                padding: 50px 0;
             }
             
             .section-header h2 {
-                font-size: 30px;
+                font-size: 32px;
+            }
+            
+            .section-header p {
+                font-size: 16px;
+            }
+            
+            .features-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .chatbot-window {
+                bottom: 90px;
+                right: 10px;
+                left: 10px;
+                width: auto;
+                max-width: none;
+            }
+            
+            .chatbot-button {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
             }
         }
         
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 30px;
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 18px;
             }
             
-            .about-image-accent {
-                display: none;
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
             }
             
-            .why-us-grid {
-                grid-template-columns: 1fr;
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .contact-form,
+            .contact-info-card {
+                padding: 25px;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="header-top">
-            <div class="container header-top-content">
-                <div class="header-info">
-                    <div class="header-info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>Call Us Today</span>
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-info">
+                        <div class="header-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Call for a free quote</span>
+                        </div>
+                        <div class="header-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@oasishomes.com</span>
+                        </div>
                     </div>
-                    <div class="header-info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>info@oasishomes.com</span>
+                    <div class="header-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                </div>
-                <div class="header-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#">
-                    <div class="logo-icon">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <div class="logo-text">
-                        Oasis Homes
-                        <span>Plumbing & Bath Specialists</span>
-                    </div>
-                </a>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">
+                        <div class="logo-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <div class="logo-text">
+                            Oasis Homes
+                            <span>& Plumbing</span>
+                        </div>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact" class="nav-button">Get a Quote</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="tel:" class="nav-button"><i class="fas fa-phone"></i> Free Quote</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Transform Your Home with <span>Expert Bathroom & Plumbing Solutions</span></h1>
-            <p>With over 10 years of experience, our team delivers exceptional quality and craftsmanship for all your bathroom refurbishment and plumbing needs.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-                <a href="#services" class="btn btn-outline">Our Services</a>
-            </div>
-        </div>
-        <a href="#about" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section-padding">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>About Us</h2>
-                <p>Learn more about our experience and expertise in bathroom refurbishments and plumbing.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="about-image-main">
-                        <img src="/images/oasis-about.png" alt="Oasis Homes & Plumbing Team">
-                    </div>
-                    <div class="about-image-accent"></div>
-                    <div class="experience-badge">
-                        <span>10+</span>
-                        <span>Years</span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Professional Plumbing & Bathroom Refurbishment</h1>
+                    <p>With over 10 years of experience, we deliver exceptional quality in bathroom installations, wet rooms, and all plumbing services across London.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                        <a href="#services" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Professional Bathroom & Plumbing Specialists</h3>
-                    <p>OASIS HOMES & PLUMBING LTD has over 10 years of experience in bathroom refurbishments and all aspects of plumbing. We take pride in delivering high-quality workmanship and exceptional customer service on every project we undertake.</p>
-                    <p>Our fully experienced team specializes in bathroom refurbishments but is not limited to just bathrooms. We cover all aspects of plumbing, tiling, skimming, electrical work, and carpentry to provide comprehensive solutions for your home.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <div class="about-feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="about-feature-text">
-                                <h4>Fully Experienced Team</h4>
-                                <p>Specialists in plumbing, tiling, skimming, electrical work, and carpentry.</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="about-feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="about-feature-text">
-                                <h4>Quality Craftsmanship</h4>
-                                <p>Attention to detail and high standards on every project we complete.</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="about-feature-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="about-feature-text">
-                                <h4>Wide Coverage Area</h4>
-                                <p>Serving Ruislip to Mill Hill and everywhere in between.</p>
-                            </div>
-                        </div>
+                <div class="hero-image">
+                    <div style="width: 100%; height: 400px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 100px;">
+                        <i class="fas fa-bath"></i>
                     </div>
-                    <a href="#contact" class="btn btn-primary">Contact Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>10+ Years Experience</h3>
+                    <p>Decade of expertise in bathroom refurbishment and plumbing services</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Emergency Service</h3>
+                    <p>We're here when you need us most with round-the-clock emergency support</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Fully Insured</h3>
+                    <p>Complete peace of mind with comprehensive insurance coverage</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with satisfaction guarantees on all projects</p>
                 </div>
             </div>
         </div>
@@ -1300,252 +1216,97 @@
         <div class="container">
             <div class="section-header text-center">
                 <h2>Our Services</h2>
-                <p>We offer a comprehensive range of bathroom and plumbing services to meet all your needs.</p>
+                <p>Comprehensive plumbing and bathroom solutions for your home</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/bathroom-refurb.png" alt="Bathroom Refurbishment">
+                    <div class="service-image">
+                        <i class="fas fa-bath"></i>
                     </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-bath"></i>
-                        </div>
+                    <div class="service-content">
                         <h3>Bathroom Refurbishment</h3>
-                        <p>Complete bathroom transformations including design, installation, tiling, plumbing, and finishing touches to create your dream bathroom.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>Complete bathroom renovations from design to installation, creating beautiful and functional spaces.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Custom Design</li>
+                            <li><i class="fas fa-check"></i> Quality Fixtures</li>
+                            <li><i class="fas fa-check"></i> Professional Installation</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Get a Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/conteporary wet-room.png" alt="Wet Room Installation">
+                    <div class="service-image">
+                        <i class="fas fa-shower"></i>
                     </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-shower"></i>
-                        </div>
+                    <div class="service-content">
                         <h3>Wet Room Installation</h3>
-                        <p>Specialized wet room design and installation, creating stylish, accessible, and waterproof bathroom spaces perfect for any home.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>Modern, accessible wet room solutions with expert waterproofing and drainage systems.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Waterproof Tanking</li>
+                            <li><i class="fas fa-check"></i> Level Access</li>
+                            <li><i class="fas fa-check"></i> Premium Tiling</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Get a Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/oasis-emergency.png" alt="General Plumbing">
+                    <div class="service-image">
+                        <i class="fas fa-wrench"></i>
                     </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-wrench"></i>
-                        </div>
+                    <div class="service-content">
                         <h3>General Plumbing</h3>
-                        <p>Comprehensive plumbing services including repairs, installations, and maintenance for all your home's plumbing needs.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>All plumbing repairs, installations, and maintenance for residential properties.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Leak Repairs</li>
+                            <li><i class="fas fa-check"></i> Pipe Installation</li>
+                            <li><i class="fas fa-check"></i> Boiler Services</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Get a Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/oasis-shower.png" alt="Shower Installation">
+                    <div class="service-image">
+                        <i class="fas fa-sink"></i>
                     </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <h3>Shower Installation</h3>
-                        <p>Expert installation of various shower types, from electric showers to power showers and complete shower enclosures.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/oasis-emergency.png" alt="Emergency Plumbing">
-                    </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3>Emergency Plumbing</h3>
-                        <p>24-hour emergency plumbing service for burst pipes, blocked drains, leaks, and other urgent plumbing issues.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <img src="/images/oasis-tiling.png" alt="Tiling Services">
-                    </div>
-                    <div class="service-card-body">
-                        <div class="service-icon">
-                            <i class="fas fa-border-all"></i>
-                        </div>
+                    <div class="service-content">
                         <h3>Tiling Services</h3>
-                        <p>Professional tiling for bathrooms, kitchens, and other areas, with a wide range of styles and finishes available.</p>
-                        <a href="#" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                        <p>Expert tiling for bathrooms, kitchens, and all wet areas with precision and attention to detail.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Wall & Floor Tiling</li>
+                            <li><i class="fas fa-check"></i> Mosaic Work</li>
+                            <li><i class="fas fa-check"></i> Grouting & Sealing</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Get a Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-us section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Why Choose Us</h2>
-                <p>What sets us apart from other bathroom and plumbing companies.</p>
-            </div>
-            <div class="why-us-content">
-                <div class="why-us-text">
-                    <h3>The Oasis Homes & Plumbing Advantage</h3>
-                    <p>When you choose Oasis Homes & Plumbing, you're choosing a team of dedicated professionals committed to delivering exceptional results. Our meticulous attention to detail, quality craftsmanship, and customer-focused approach ensure your project is completed to the highest standards.</p>
-                    <div class="why-us-grid">
-                        <div class="why-us-item">
-                            <i class="fas fa-medal"></i>
-                            <h4>10+ Years Experience</h4>
-                            <p>Over a decade of specialized experience in bathroom refurbishments and plumbing services.</p>
-                        </div>
-                        <div class="why-us-item">
-                            <i class="fas fa-users"></i>
-                            <h4>Expert Team</h4>
-                            <p>Skilled specialists in plumbing, tiling, skimming, electrical work, and carpentry.</p>
-                        </div>
-                        <div class="why-us-item">
-                            <i class="fas fa-clipboard-check"></i>
-                            <h4>Quality Guaranteed</h4>
-                            <p>We stand behind our work with quality guarantees for your peace of mind.</p>
-                        </div>
-                        <div class="why-us-item">
-                            <i class="fas fa-pound-sign"></i>
-                            <h4>Competitive Pricing</h4>
-                            <p>Fair, transparent pricing with no hidden fees or unexpected costs.</p>
-                        </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Emergency Plumbing</h3>
+                        <p>Fast response to urgent plumbing issues, available 24/7 for emergencies.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Burst Pipes</li>
+                            <li><i class="fas fa-check"></i> Emergency Repairs</li>
+                            <li><i class="fas fa-check"></i> Rapid Response</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Call Now <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="why-us-image">
-                    <img src="/images/designer-bathroom.png" alt="Quality Bathroom Work">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Recent Projects</h2>
-                <p>Take a look at some of our recently completed bathroom and plumbing projects.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/modern-family-bathroom.png" alt="Modern Bathroom Refurbishment">
-                        <div class="project-overlay">
-                            <span class="project-category">Bathroom Refurbishment</span>
-                            <h3>Modern Family Bathroom</h3>
-                        </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-hammer"></i>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/conteporary wet-room.png" alt="Wet Room Installation">
-                        <div class="project-overlay">
-                            <span class="project-category">Wet Room</span>
-                            <h3>Contemporary Wet Room</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/luxury-walk-in-shower.png" alt="Luxury Shower Installation">
-                        <div class="project-overlay">
-                            <span class="project-category">Shower Installation</span>
-                            <h3>Luxury Walk-in Shower</h3>
-                        </div>
-                    </div>
-                </div>
-              <!--  <div class="project-card">
-                    <div class="project-image">
-                        <img src="/images/designer-bathroom.png" alt="Tiling Project">
-                        <div class="project-overlay">
-                            <span class="project-category">Tiling</span>
-                            <h3>Designer Bathroom Tiling</h3>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Bathroom?</h2>
-            <p>Contact us today for a free quote and consultation. Let our expert team bring your vision to life!</p>
-            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>What Our Clients Say</h2>
-                <p>Read testimonials from our satisfied customers.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Oasis Homes & Plumbing transformed our outdated bathroom into a stunning modern space. Their attention to detail and quality of workmanship exceeded our expectations. Highly recommend!</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-image">
-                            <img src="/api/placeholder/60/60" alt="Sarah Thompson">
-                        </div>
-                        <div class="testimonial-author-info">
-                            <h4>Sarah Thompson</h4>
-                            <p>Ruislip</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Professional service from start to finish. The team was punctual, tidy, and completed the job to a very high standard. Our new wet room looks amazing, and the waterproofing is perfect!</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-image">
-                            <img src="/api/placeholder/60/60" alt="James Wilson">
-                        </div>
-                        <div class="testimonial-author-info">
-                            <h4>James Wilson</h4>
-                            <p>Harrow</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Called Oasis for an emergency plumbing issue, and they responded quickly. Fixed the problem efficiently and at a reasonable price. Will definitely use their services again!</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-image">
-                            <img src="/api/placeholder/60/60" alt="David Parker">
-                        </div>
-                        <div class="testimonial-author-info">
-                            <h4>David Parker</h4>
-                            <p>Mill Hill</p>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
+                    <div class="service-content">
+                        <h3>Shower Installation</h3>
+                        <p>Professional installation of all shower types including electric, power, and mixer showers.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> All Shower Types</li>
+                            <li><i class="fas fa-check"></i> Glass Enclosures</li>
+                            <li><i class="fas fa-check"></i> Quality Fittings</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Get a Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -1614,7 +1375,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Name" required>
                         </div>
@@ -1667,8 +1428,6 @@
                             <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                             <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                             <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                            <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
                             <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                         </ul>
                     </div>
@@ -1678,9 +1437,7 @@
                             <li><a href="#"><i class="fas fa-chevron-right"></i> Bathroom Refurbishment</a></li>
                             <li><a href="#"><i class="fas fa-chevron-right"></i> Wet Room Installation</a></li>
                             <li><a href="#"><i class="fas fa-chevron-right"></i> General Plumbing</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right"></i> Shower Installation</a></li>
                             <li><a href="#"><i class="fas fa-chevron-right"></i> Emergency Plumbing</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right"></i> Tiling Services</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget">
@@ -1709,14 +1466,6 @@
                                 info@oasishomes.com
                             </div>
                         </div>
-                        <div class="footer-contact-item">
-                            <div class="footer-contact-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="footer-contact-text">
-                                www.oasishomes.com
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1727,5 +1476,258 @@
             </div>
         </div>
     </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotButton">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chatbot-title">
+                        <h3>Oasis Assistant</h3>
+                        <p>Online</p>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Hi! 👋 I'm your Oasis Homes assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="quick-options" id="quickOptions">
+                <button class="quick-option" data-question="services">Our Services</button>
+                <button class="quick-option" data-question="price">Pricing Info</button>
+                <button class="quick-option" data-question="area">Areas Covered</button>
+                <button class="quick-option" data-question="emergency">Emergency Service</button>
+            </div>
+            <div class="message bot" style="padding: 0 20px; display: none;">
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+                <button class="chatbot-send" id="chatbotSend">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking nav links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mainNav.classList.remove('active');
+                    const icon = mobileMenuToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Chatbot Functionality
+        const chatbotButton = document.getElementById('chatbotButton');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const chatbotClose = document.getElementById('chatbotClose');
+        const chatbotMessages = document.getElementById('chatbotMessages');
+        const chatbotInput = document.getElementById('chatbotInput');
+        const chatbotSend = document.getElementById('chatbotSend');
+        const quickOptions = document.getElementById('quickOptions');
+        const typingIndicator = document.getElementById('typingIndicator');
+
+        // Chatbot Knowledge Base
+        const responses = {
+            services: "We offer:\n\n🛁 Bathroom Refurbishment\n🚿 Wet Room Installation\n🔧 General Plumbing\n🚰 Shower Installation\n⚡ 24/7 Emergency Plumbing\n🎨 Tiling Services\n\nWhich service are you interested in?",
+            
+            bathroom: "Our bathroom refurbishment service includes:\n\n✓ Complete design & planning\n✓ Quality fixtures & fittings\n✓ Professional installation\n✓ Tiling & waterproofing\n✓ Electrical & plumbing work\n\nWould you like a free quote?",
+            
+            wetroom: "Our wet room installations feature:\n\n✓ Expert waterproof tanking\n✓ Level access options\n✓ Premium tiling\n✓ Modern drainage systems\n✓ Accessible designs\n\nPerfect for mobility and modern aesthetics!",
+            
+            price: "Our pricing is competitive and transparent:\n\n💰 Free quotes & consultations\n💳 Flexible payment options\n📋 No hidden costs\n🎯 Value for money\n\nContact us for a personalized quote based on your specific requirements!",
+            
+            area: "We proudly serve:\n\n📍 Harrow & surrounding areas\n📍 North West London\n📍 All London boroughs\n\nBased in Harrow, we cover a wide service area. Ask about your specific location!",
+            
+            emergency: "24/7 Emergency Service Available!\n\n⚡ Burst pipes\n💧 Major leaks\n🚨 Urgent repairs\n⏰ Fast response time\n\nCall us immediately for emergency situations!",
+            
+            hours: "Our working hours:\n\n📅 Monday - Friday: 8:00 AM - 6:00 PM\n📅 Saturday: 9:00 AM - 4:00 PM\n📅 Sunday: By appointment\n⚡ Emergency: 24/7\n\nWhen would you like to schedule?",
+            
+            contact: "Get in touch with us:\n\n📞 Phone: Call for free quote\n📧 Email: info@oasishomes.com\n📍 Address: Flat 54 Bovis House 142, Northolt Rd, Harrow, HA2 0EG\n\nWe're here to help!",
+            
+            quote: "To get your free quote:\n\n1️⃣ Call us directly\n2️⃣ Fill out our contact form\n3️⃣ Email us your requirements\n\nWe'll respond within 24 hours with a detailed estimate!",
+            
+            experience: "We have:\n\n⭐ 10+ years of experience\n✅ Fully licensed & insured\n🏆 Quality workmanship guarantee\n👷 Professional team\n💯 100% customer satisfaction focus\n\nTrust the experts at Oasis Homes!",
+            
+            default: "I'm here to help! You can ask me about:\n\n• Our services\n• Pricing & quotes\n• Areas we cover\n• Emergency services\n• Working hours\n• Contact information\n\nWhat would you like to know?"
+        };
+
+        // Toggle Chatbot
+        chatbotButton.addEventListener('click', function() {
+            chatbotWindow.classList.add('active');
+            chatbotInput.focus();
+        });
+
+        chatbotClose.addEventListener('click', function() {
+            chatbotWindow.classList.remove('active');
+        });
+
+        // Quick Options
+        quickOptions.addEventListener('click', function(e) {
+            if (e.target.classList.contains('quick-option')) {
+                const question = e.target.dataset.question;
+                const questionText = e.target.textContent;
+                addMessage(questionText, 'user');
+                setTimeout(() => {
+                    showTypingIndicator();
+                    setTimeout(() => {
+                        hideTypingIndicator();
+                        addMessage(responses[question], 'bot');
+                    }, 1000);
+                }, 500);
+            }
+        });
+
+        // Send Message
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message === '') return;
+
+            addMessage(message, 'user');
+            chatbotInput.value = '';
+
+            setTimeout(() => {
+                showTypingIndicator();
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    const response = getResponse(message.toLowerCase());
+                    addMessage(response, 'bot');
+                }, 1500);
+            }, 500);
+        }
+
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Add Message to Chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender);
+            
+            const messageContent = document.createElement('div');
+            messageContent.classList.add('message-content');
+            messageContent.textContent = text;
+            
+            messageDiv.appendChild(messageContent);
+            chatbotMessages.appendChild(messageDiv);
+            
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Show/Hide Typing Indicator
+        function showTypingIndicator() {
+            typingIndicator.classList.add('active');
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            typingIndicator.classList.remove('active');
+        }
+
+        // Get Response Based on User Input
+        function getResponse(message) {
+            // Check for keywords and return appropriate response
+            if (message.includes('service') || message.includes('what do you do') || message.includes('offer')) {
+                return responses.services;
+            } else if (message.includes('bathroom') || message.includes('refurb')) {
+                return responses.bathroom;
+            } else if (message.includes('wet room') || message.includes('wetroom')) {
+                return responses.wetroom;
+            } else if (message.includes('price') || message.includes('cost') || message.includes('how much')) {
+                return responses.price;
+            } else if (message.includes('area') || message.includes('location') || message.includes('where') || message.includes('cover')) {
+                return responses.area;
+            } else if (message.includes('emergency') || message.includes('urgent') || message.includes('24/7')) {
+                return responses.emergency;
+            } else if (message.includes('hours') || message.includes('when') || message.includes('time') || message.includes('open')) {
+                return responses.hours;
+            } else if (message.includes('contact') || message.includes('phone') || message.includes('email') || message.includes('address')) {
+                return responses.contact;
+            } else if (message.includes('quote') || message.includes('estimate')) {
+                return responses.quote;
+            } else if (message.includes('experience') || message.includes('qualified') || message.includes('professional')) {
+                return responses.experience;
+            } else if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
+                return "Hello! 👋 Welcome to Oasis Homes & Plumbing. How can I assist you today?";
+            } else if (message.includes('thanks') || message.includes('thank you')) {
+                return "You're welcome! Feel free to ask if you need anything else. We're here to help! 😊";
+            } else if (message.includes('bye') || message.includes('goodbye')) {
+                return "Goodbye! Thanks for chatting with us. Contact us anytime for your plumbing needs! 👋";
+            } else {
+                return responses.default;
+            }
+        }
+
+        // Form Submit Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
